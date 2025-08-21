@@ -1,3 +1,5 @@
+```mermaid
+
 graph TD
     subgraph "Frontend (Vue.js Application)"
         A[Applicant Web App]
