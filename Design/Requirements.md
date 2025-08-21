@@ -1,4 +1,4 @@
-## Functional Requirements
+# Functional Requirements
 
 ### Applicant-Facing Requirements
 
@@ -10,7 +10,7 @@ The system must allow applicants to complete the application and submit it witho
 
 Upon submission, the system will let applicants know they are done with submission.
 
-Staff-Facing Requirements
+## Staff-Facing Requirements
 
 The system must provide a secure login for Dreamer Staffing employees.
 The system must have an administrative dashboard to view all submitted applications.
@@ -23,4 +23,5 @@ The system must provide an option to download or print applicant information
 
 ## Non-Functional Requirements
 Usability: The single application form must be intuitive and easy to complete for all applicants, including those with limited computer literacy.
+
 Security: The system must use the unique reference number to help staff identify applicants and their submissions securely.
