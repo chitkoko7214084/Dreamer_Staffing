@@ -22,6 +22,8 @@ The system must provide an option to download or print applicant information
 
 
 ## Non-Functional Requirements
-Usability: The single application form must be intuitive and easy to complete for all applicants, including those with limited computer literacy.
+Usability: The single application form must be intuitive and easy to complete for all applicants, including those with limited computer literacy. The Application form should have a translation tab from English to Burmese and Spanish for applicants who have a language barrier. 
 
 Security: The system must use the unique reference number to help staff identify applicants and their submissions securely.
+
+
