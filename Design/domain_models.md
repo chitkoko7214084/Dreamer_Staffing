@@ -61,3 +61,9 @@ classDiagram
       skillName: string
 
 
+Applicant: The person applying.
+Application: The submitted form.
+WorkHistory: The applicant's job experience.
+Assessment: The test scores.
+Staff: The employees using the system.
+Skill: The specific skills tracked.
