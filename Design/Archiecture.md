@@ -1,31 +1,23 @@
-
 graph TD
-    subgraph "External Users"
-        A[Applicant]
+    subgraph "Frontend (Vue.js Application)"
+        A[Applicant Web App]
+        B[Staff Dashboard]
     end
 
-    subgraph "Dreamer Staffing System"
-        subgraph "Web Application"
-            B[Frontend]
-            C[Backend API]
+    subgraph "Firebase Backend"
+        subgraph "Authentication & Authorization"
+            C[Firebase Authentication]
         end
-        subgraph "Core Services"
-            D[Application Service]
-            E[Assessment Service]
-            F[Scoring & Categorization Service]
-            G[Staff Management Service]
+        subgraph "Database"
+            D[Cloud Firestore]
         end
-        H[Database]
+        subgraph "Serverless Functions"
+            E[Cloud Functions]
+        end
     end
 
-    A -- "Submits Application & Tests" --> B
-    B -- "Sends Data" --> C
-    C -- "Handles Business Logic" --> D & E
-    D -- "Saves Data" --> H
-    E -- "Calculates Scores" --> F
-    F -- "Stores Result" --> H
-    F -- "Sends Category" --> C
-    C -- "Retrieves Data" --> H
-    C -- "Serves Data" --> B
-    B -- "Presents Dashboard" --> G[Staff User]
-    G -- "Views & Manages" --> C
+    A -- "1. Submits Data (Application)" --> C & D
+    B -- "2. Reads & Manages Data" --> D
+    D -- "3. Data Change Trigger" --> E
+    E -- "4. Logic: Calculate Score & Categorize" --> D
+    C -- "5. Secures Data Access via Rules" --> D
